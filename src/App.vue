@@ -188,7 +188,8 @@ const startRecording = async () => {
     }
     recognition.value.ondataavailable = (event:any) => {
       console.log(event, 'available');
-      data.value.push(event.data);
+      let data = event.data;
+      data.value.push(data);
       
     }
 
